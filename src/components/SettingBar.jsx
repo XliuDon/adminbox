@@ -14,9 +14,9 @@ import { useStateContext } from '../contexts/ContextProvider';
 import ABDivider from './ABDivider'
 
 export default function SettingBar(){
-    const {themeSettings, currentColor, currentMode,setThemeSettings,setColor,sideBarBg,
+    const {themeSettings, currentColor, currentMode,setThemeSettings,setColor,sideBarBg,activeMenu, setCurrentActiveMenu,
         setSideBarBg, setMode} = useStateContext();
-    
+    console.log('activeMenu',activeMenu)
     const sideBarBgHanlder = (bgType)=>{
         setSideBarBg(bgType);
     }    
@@ -50,9 +50,8 @@ export default function SettingBar(){
     return (
             <Drawer
                 sx={{              
-                    display: 'block',
-                    '& .MuiDrawer-paper': { 
-                        width: { sm: 360, xs: 200 },
+                    display: 'inline-flex',
+                    '& .MuiDrawer-paper': {                         
                         boxShadow: 1,   
                         padding: '0 0.625rem',                
                     },
@@ -198,7 +197,10 @@ export default function SettingBar(){
                                     display: 'inline-flex',
                                     position: 'relative',
                                     left:0,                                
-                                }} />  
+                                }} 
+                                checked={!activeMenu}
+                                onChange={(e)=>setCurrentActiveMenu(!e.target.checked)}
+                                />  
                     </Box>  
                     <ABDivider />
                     <Box sx={{

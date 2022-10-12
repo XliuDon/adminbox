@@ -45,13 +45,13 @@ const baseTheme = createTheme({
       letterSpacing: '0.02857em',
     },
     body1: {
-      fontSize: '1rem',
+      fontSize: '0.875rem',
       fontWeight: 300,
       lineHeight: 1.6,      
       letterSpacing: '0.00938em',
     },
     body2: {
-      fontSize: '1rem',
+      fontSize:  '0.875rem',
       fontWeight: 300,
       lineHeight: 1.6,
       letterSpacing: '0.001em',
@@ -71,14 +71,14 @@ const darkTheme = createTheme({
   palette: {
     mode: "dark",
     primary: {
-      main: "#1A2034"
+      main: "rgba(255, 255, 255, 0.87)",
     },
     secondary: {
       main: "#344767"
     },
     background: {
       default: '#1A2034',
-      paper: 'rgb(31, 40, 62)'          
+      paper: '#1F283E'          
     },
   },
 
@@ -101,11 +101,11 @@ const darkTheme = createTheme({
     },
     body1: {
       ...baseTheme.typography.body1,
-      color: 'rgba(255, 255, 255, 0.8)'     
+      ...{color: 'rgba(255, 255, 255, 0.8)'}
     },
     body2: {
-      ...baseTheme.typography.body2,
-      color: 'rgba(255, 255, 255, 0.8)'     
+       ...baseTheme.typography.body2,
+      ...{color: 'rgba(255, 255, 255, 0.8)'}   
     }, 
     caption:{
       ...baseTheme.typography.caption,
@@ -151,10 +151,10 @@ const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#F0F2F5"
+      main: "#344767"
     },
     secondary: {
-      main: "#000"
+      main: "#626262"
     },
     background: {
       default: '#F0F2F5',//linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))
@@ -180,7 +180,7 @@ const lightTheme = createTheme({
     },
     body1: {
       ...baseTheme.typography.body1,
-      color: '#7B809A'    
+      color: 'rgb(52, 71, 103)'        
     },
     body2: {
       ...baseTheme.typography.body2,
@@ -188,6 +188,7 @@ const lightTheme = createTheme({
     }, 
     caption:{
       ...baseTheme.typography.caption,
+      color: '#344767',
     }
   },
   components: {

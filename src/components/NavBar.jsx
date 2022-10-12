@@ -75,13 +75,13 @@ export default function NavBar() {
     return ()=> window.removeEventListener('resize', handleResize);
   }, []);
 
-  useEffect(()=>{
-    if(screenSize <= 900){
-      setActiveMenu(false);
-    }else{
-      setActiveMenu(true);
-    }
-  },[screenSize])
+  // useEffect(()=>{
+  //   if(screenSize <= 900){
+  //     setActiveMenu(false);
+  //   }else{
+  //     setActiveMenu(true);
+  //   }
+  // },[screenSize])
 
   const handleProfileMenuOpen = (event) => {
     setAnchorEl(event.currentTarget);

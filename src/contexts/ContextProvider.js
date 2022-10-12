@@ -13,7 +13,9 @@ export const ContextProvider = ({ children }) => {
     const themeMode = localStorage.getItem('themeMode');
     const colorMode = localStorage.getItem('colorMode');
     const sideBarBg = localStorage.getItem('sideBarBg')
-    const [activeMenu, setActiveMenu] = useState(true);
+    const configedActiveMenu = localStorage.getItem('activeMenu')
+    console.log('configedActiveMenu',configedActiveMenu)
+    const [activeMenu, setActiveMenu] = useState(configedActiveMenu==='true');
     const [isClicked, setIsClicked] = useState(initialState);
     const [screenSize, setScreenSize] = useState(undefined);
     const [currentColor, setCurrentColor] = useState(colorMode ? colorMode : '#03C9D7');
@@ -21,6 +23,11 @@ export const ContextProvider = ({ children }) => {
     const [themeSettings, setThemeSettings] = useState(false);
     const [currentSideBarBg, setSurrentSideBarBg] = useState('white');
     
+    const setCurrentActiveMenu=(isActive)=>{
+        localStorage.setItem('activeMenu', isActive);
+        setActiveMenu(isActive);
+    }
+
     const setSideBarBg=(bgType)=>{
         setSurrentSideBarBg(bgType);
         localStorage.setItem('sideBarBg', bgType);
@@ -60,6 +67,7 @@ export const ContextProvider = ({ children }) => {
         <StateContext.Provider value={{
             activeMenu,
             setActiveMenu,
+            setCurrentActiveMenu,
             isClicked, 
             setIsClicked,
             handleClick,
@@ -72,7 +80,7 @@ export const ContextProvider = ({ children }) => {
             setMode,
             setColor,
             sideBarBg,
-            setSideBarBg,
+            setSideBarBg,            
             useToken: {setToken: saveToken, token}
         }}>
             {children}
