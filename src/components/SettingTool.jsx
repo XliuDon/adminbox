@@ -34,7 +34,7 @@ export default function SettingTool(){
         <Box sx={{ '& > :not(style)': { m: 1 }, position: 'fixed', zIndex: 1500, right: '2rem', bottom: '2rem'}}
             onClick={()=>setThemeSettings((prevStatus) => !prevStatus)}>
             <Fab color="secondary" aria-label="add" sx={{background: bgColor}} size="large">
-                <SettingsRoundedIcon fontSize="inherit" />
+                <SettingsRoundedIcon size="large" />
             </Fab>
         </Box>
     )

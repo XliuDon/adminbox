@@ -22,6 +22,54 @@ import product5 from './product5.jpg';
 import product6 from './product6.jpg';
 import product7 from './product7.jpg';
 import product8 from './product8.jpg';
+import bg1 from './bg1.jpg'
+
+export const profile_bg = bg1;
+export const avatar_image = avatar;
+
+export const switchGroupsA = 
+  {
+    title: 'account',
+    items:[
+      {
+        name:'a1',
+        title: 'Email me when someone follows me',
+        checked: false,
+      },
+      {
+        name:'a2',
+        title: 'Email me when someone answers on my post',
+        checked: true,
+      },
+      {
+        name:'a3',
+        title: 'Email me when someone mentions me',
+        checked: false,
+      }
+    ]
+  }
+;
+
+export const switchGroupsB = {
+    title: 'application',
+    items:[
+      {
+        name:'b1',
+        title: 'New launches and projects',
+        checked: false,
+      },
+      {
+        name:'b2',
+        title: 'Monthly product updates',
+        checked: true,
+      },
+      {
+        name:'b3',
+        title: 'Subscribe to newsletter',
+        checked: true,
+      }
+    ]
+  };
 
 export const gridOrderImage = (props) => (
   <div>
@@ -489,6 +537,16 @@ export const links = [
         links: [
           {
             name: 'suborders',
+            links: [
+              {
+                name: 'calendar',
+                icon: <AiOutlineCalendar />,
+              },
+              {
+                name: 'kanban',
+                icon: <BsKanban />,
+              },
+            ]
           },
           {
             name: 'setting',
@@ -568,6 +626,127 @@ export const links = [
       // },
     ],
   },
+];
+
+
+export const menus = [
+  {
+    nodeid: '1',
+    name: 'Profile',
+    links: [{
+      nodeid:'1_1',
+      avatar: avatar,
+      name: 'Brooklyn Alice',
+      links: [
+        {
+          nodeid:'1_1_1',
+          name: 'My Profile',
+          link: '/profile',
+        },
+        {
+          nodeid:'1_1_2',
+          name: 'Setting',
+          link: '/account/setting',
+        },
+        {
+          nodeid:'1_1_3',
+          name: 'Logout',
+        }
+      ],
+    }]
+  },
+
+  {
+    nodeid: '2',
+    name: 'Dashboard',
+    links: [
+      {
+        nodeid:'2_1',
+        name: 'Dashboard',
+        icon: 'grid_view',
+        links: [
+          {
+            nodeid:'2_1_1',
+            name: 'Analytics',
+            link: '/dashboards/analytics'
+          },
+          {
+            nodeid:'2_1_2',
+            name: 'Sales',
+            link: '/dashboards/sales'
+          },
+        ],
+      }
+    ],
+  },
+
+  {
+    nodeid: '3',
+    title: 'Pages',
+    links: [
+      {
+        nodeid:'3_1',
+        name: 'Pages',
+        icon: 'image',
+        links: [
+          {
+            nodeid:'3_1_1',
+            name: 'suborders',
+            links: [
+              {
+                nodeid:'3_1_1_1',
+                name: 'calendar',
+              },
+              {
+                nodeid:'3_1_1_2',
+                name: 'kanban',
+              },
+            ]
+          },
+          {
+            nodeid:'3_1_2',
+            name: 'mycontact',
+          },
+        ],
+      },
+      {
+        nodeid:'3_2',
+        name: 'applications',
+        icon: 'apps',
+      },
+      {
+        nodeid:'3_3',
+        name: 'ecommerce',
+        icon: 'shopping_basket',
+      },
+      {
+        nodeid:'3_4',
+        name: 'Authentication',
+        icon: 'content_paste',
+      },
+    ],
+  },
+  {
+    nodeid: '4',
+    title: 'docs',
+    links: [
+      {
+        nodeid:'4_1',
+        name: 'basic',
+        icon: 'upcoming',
+      },
+      {
+        nodeid:'4_2',
+        name: 'components',
+        icon: 'view_in_ar',
+      },
+      {
+        nodeid:'4_3',
+        name: 'change log',
+        icon: 'receipt_long',
+      },
+    ],
+  }
 ];
 
 export const cartData = [

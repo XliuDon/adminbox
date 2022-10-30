@@ -28,11 +28,13 @@ const baseTheme = createTheme({
       fontSize: '1.25rem',
       fontWeight: 700,
       letterSpacing: '0em',
+      textTransform: 'capitalize',
     },
     h6: {
       fontSize: '1rem',
       fontWeight: 700,
       letterSpacing: '0.0075em',
+      textTransform: 'capitalize',
     },
     subtitle1: {
       fontSize: '0.875rem',
@@ -46,13 +48,13 @@ const baseTheme = createTheme({
     },
     body1: {
       fontSize: '0.875rem',
-      fontWeight: 300,
+      fontWeight: 400,
       lineHeight: 1.6,      
       letterSpacing: '0.00938em',
     },
     body2: {
       fontSize:  '0.875rem',
-      fontWeight: 300,
+      fontWeight: 400,
       lineHeight: 1.6,
       letterSpacing: '0.001em',
     }, 
@@ -74,12 +76,19 @@ const darkTheme = createTheme({
       main: "rgba(255, 255, 255, 0.87)",
     },
     secondary: {
-      main: "#344767"
+      main: "#fff"
     },
     background: {
       default: '#1A2034',
-      paper: '#1F283E'          
+      paper: 'rgb(32, 41, 64)'                
     },
+    tab: {
+      main: '#transpant',
+      boxShadow: 'rgb(0 0 0 / 14%) 0rem 0.125rem 0.125rem 0rem, rgb(0 0 0 / 20%) 0rem 0.1875rem 0.0625rem -0.125rem, rgb(0 0 0 / 12%) 0rem 0.0625rem 0.3125rem 0rem',
+    }, 
+    button:{
+      main: '#fff'
+    }
   },
 
   typography: {
@@ -151,15 +160,22 @@ const lightTheme = createTheme({
   palette: {
     mode: "light",
     primary: {
-      main: "#344767"
+      main: "rgb(123, 128, 154)"
     },
     secondary: {
-      main: "#626262"
+      main: "#344767"
     },
     background: {
       default: '#F0F2F5',//linear-gradient(195deg, rgb(66, 66, 74), rgb(25, 25, 25))
       paper: '#fff'          
     },     
+    tab:{
+      main: 'rgb(248,249,250)',
+      boxShadow: 'rgb(221 221 221) 0rem 0.0625rem 0.3125rem 0.0625rem'
+    },
+    text:{
+      main:'rgb(52, 71, 103)',
+    }
   },
   typography: {
     h5: {
@@ -184,7 +200,7 @@ const lightTheme = createTheme({
     },
     body2: {
       ...baseTheme.typography.body2,
-      color: '#7B809A',
+      color: 'rgb(123, 128, 154)',
     }, 
     caption:{
       ...baseTheme.typography.caption,

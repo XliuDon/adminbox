@@ -13,40 +13,40 @@ import HighlightOffIcon from '@mui/icons-material/HighlightOff';
 import { useStateContext } from '../contexts/ContextProvider';
 import ABDivider from './ABDivider'
 
-export default function SettingBar(){
-    const {themeSettings, currentColor, currentMode,setThemeSettings,setColor,sideBarBg,activeMenu, setCurrentActiveMenu,
-        setSideBarBg, setMode} = useStateContext();
-    console.log('activeMenu',activeMenu)
-    const sideBarBgHanlder = (bgType)=>{
-        setSideBarBg(bgType);
-    }    
+const sideBarBgHanlder = (bgType)=>{
+    const {setSideBarBg} = useStateContext();
+    setSideBarBg(bgType);
+}    
 
-    const GreenSwitch = styled(Switch)(({ theme }) => ({
-        '& .MuiSwitch-switchBase': {
-            '&.Mui-checked': {
-              '& .MuiSwitch-thumb': {
-                  backgroundColor: theme.palette.mode === 'dark' ? '#fff' : '#fff ' +' !important',
-                  border: theme.palette.mode === 'dark' ?'':`1px solid #000 !important`,
-                },
-              '& + .MuiSwitch-track': {
-                opacity: 1,
-                backgroundColor: theme.palette.mode === 'dark' ? '#323A54' : '#000',
-              },
-              '&:hover': {
-                backgroundColor: alpha(grey[900], theme.palette.action.hoverOpacity),
-              },
+const BlockSwitch = styled(Switch)(({ theme }) => ({
+    '& .MuiSwitch-switchBase': {
+        '&.Mui-checked': {
+          '& .MuiSwitch-thumb': {
+              backgroundColor: theme.palette.mode === 'dark' ? '#fff' : '#fff ' +' !important',
+              border: theme.palette.mode === 'dark' ?'':`1px solid #000 !important`,
             },
-          },
-        '& .MuiSwitch-thumb': {
-            backgroundColor: theme.palette.mode === 'dark' ? '#fff' : theme.palette.primary,
-            borderColor: '#42424A !important',
-          },
-          '& .MuiSwitch-track': {
+          '& + .MuiSwitch-track': {
             opacity: 1,
-            backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
+            backgroundColor: theme.palette.mode === 'dark' ? '#323A54' : '#000',
           },
-      }));
+          '&:hover': {
+            backgroundColor: alpha(grey[900], theme.palette.action.hoverOpacity),
+          },
+        },
+      },
+    '& .MuiSwitch-thumb': {
+        backgroundColor: theme.palette.mode === 'dark' ? '#fff' : theme.palette.primary,
+        borderColor: '#42424A !important',
+      },
+      '& .MuiSwitch-track': {
+        opacity: 1,
+        backgroundColor: theme.palette.mode === 'dark' ? '#8796A5' : '#aab4be',
+      },
+  }));
 
+export default function SettingBar(){
+    const {themeSettings, currentColor, currentMode,setThemeSettings,setColor,sideBarBg,activeMenu, setCurrentActiveMenu,setMode} = useStateContext();
+    
     return (
             <Drawer
                 sx={{              
@@ -175,7 +175,7 @@ export default function SettingBar(){
                             <Typography variant="h6"sx={{
                                                                
                                 }}>Navbar Fixed</Typography>    
-                            <GreenSwitch defaultChecked sx={{
+                            <BlockSwitch defaultChecked sx={{
                                     display: 'inline-flex',
                                     position: 'relative',
                                     left:0,                                
@@ -193,7 +193,7 @@ export default function SettingBar(){
                             <Typography variant="h6"sx={{
                                                                
                                 }}>Sidenav Mini</Typography>    
-                            <GreenSwitch  sx={{
+                            <BlockSwitch  sx={{
                                     display: 'inline-flex',
                                     position: 'relative',
                                     left:0,                                
@@ -213,7 +213,7 @@ export default function SettingBar(){
                             <Typography variant="h6"sx={{
                                                                
                                 }}>Light / Dark</Typography>    
-                            <GreenSwitch sx={{
+                            <BlockSwitch sx={{
                                     display: 'inline-flex',
                                     position: 'relative',
                                     left:0,                                                                    

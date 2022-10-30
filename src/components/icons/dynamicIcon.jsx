@@ -1,6 +1,9 @@
-import React, {createElement } from "react";
-import * as MuiIcons from '@material-ui/core/icons'
+import React from "react";
+import Icon from '@mui/material/Icon';
 
-export const AbIcon = ({ iconName }) => {
-    return React.createElement(MuiIcons[iconName]);
-}
+
+ export const AbIcon =({iconName, ...props }) =>{
+
+    return (<Icon {...props}>{iconName}</Icon>);
+ }
+

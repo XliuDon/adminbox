@@ -6,7 +6,7 @@ import Link from '@mui/material/Link';
 import { createTheme, ThemeProvider, styled,useTheme,alpha  } from '@mui/material/styles';
 import Typography from '@mui/material/Typography';
 import Fade from '@mui/material/Fade';
-import { links,customersData } from '../data/dummy';
+import { menus,customersData } from '../data/dummy';
 import Menus from './Menus'
 import { useStateContext } from '../contexts/ContextProvider';
 import ClickAwayListener from '@mui/base/ClickAwayListener';
@@ -23,7 +23,7 @@ const drawerWidth = 250;
 
 
 export default function SideBar(){
-    const {activeMenu, setActiveMenu, currentColor, currentMode, sideBarBg} = useStateContext();
+    const {activeMenu, setActiveMenu,  sideBarBg} = useStateContext();
     const [open, setOpen] = React.useState(true);
 
     const openedMixin = (theme) => ({
@@ -38,7 +38,7 @@ export default function SideBar(){
       height: 'calc(100vh - 2rem)',
       boxShadow: `rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem`,
       position: "fixed",
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         display: activeMenu?'block': "none",
        },
     });
@@ -49,7 +49,7 @@ export default function SideBar(){
         duration: theme.transitions.duration.leavingScreen,
       }),
       overflowX: 'hidden',  
-      width: { sm: `calc(${theme.spacing(11)} + 1px)`, xs:'none' },
+      width: { lg: `calc(${theme.spacing(11)} + 1px)`, md:'none' },
       [theme.breakpoints.up('sm')]: {
         width: `calc(${theme.spacing(12)} + 1px)`,
       },
@@ -58,7 +58,7 @@ export default function SideBar(){
       height: 'calc(100vh - 2rem)',
       boxShadow: `rgb(0 0 0 / 5%) 0rem 1.25rem 1.6875rem 0rem`,
       position: "fixed",
-      [theme.breakpoints.down('sm')]: {
+      [theme.breakpoints.down('md')]: {
         display: activeMenu?'block': "none",
        },
     });
@@ -71,31 +71,14 @@ export default function SideBar(){
       // necessary for content to be below app bar
       ...theme.mixins.toolbar,
     }));
-    
-    const AppBar = styled(MuiAppBar, {
-      shouldForwardProp: (prop) => prop !== 'open',
-    })(({ theme, open }) => ({
-      zIndex: theme.zIndex.drawer + 1,
-      transition: theme.transitions.create(['width', 'margin'], {
-        easing: theme.transitions.easing.sharp,
-        duration: theme.transitions.duration.leavingScreen,
-      }),
-      ...(open && {
-        marginLeft: drawerWidth,
-        width: `calc(100% - ${drawerWidth}px)`,
-        transition: theme.transitions.create(['width', 'margin'], {
-          easing: theme.transitions.easing.sharp,
-          duration: theme.transitions.duration.enteringScreen,
-        }),
-      }),
-    }));
-    
+        
     const Drawer = styled(MuiDrawer, { shouldForwardProp: (prop) => prop !== 'open' })(
       ({ theme, open }) => ({
         width: drawerWidth,
         flexShrink: 0,
         whiteSpace: 'nowrap',
         boxSizing: 'border-box',
+        zIndex: 1000,
         ...(open && {
           ...openedMixin(theme),
           '& .MuiDrawer-paper': openedMixin(theme),
@@ -109,15 +92,15 @@ export default function SideBar(){
     
     const ClosedButtonWrapper = styled(IconButton, {shouldForwardProp: (prop) => true})(
       ({ theme, open }) => ({
-        ...(!open && {
-          display: 'none',
-          [theme.breakpoints.down('sm')]: {
-           display:"block",
+        ...(activeMenu && {
+          display: 'block',
+          [theme.breakpoints.up('md')]: {
+           display:"none",
           },
         }),
-        // ...(!open && {
-        //   display: 'none',     
-        // }),
+        ...(!activeMenu && {
+          display: 'none',     
+        }),
       }));
 
       
@@ -154,8 +137,9 @@ export default function SideBar(){
     // <ClickAwayListener onClickAway={handleDrawerClose}>    
       <Drawer variant="permanent" 
         open={open} 
+        transitionDuration={5000}
         sx={{
-                 display: { sm: 'block',  }
+                //  display: { sm: 'block',  }
             }} 
         anchor="left">
             <DrawerHeader>
@@ -182,7 +166,7 @@ export default function SideBar(){
             
             </DrawerHeader>
             <ABDivider />
-            <Menus menus={links} customersData={customersData}/>
+            <Menus menus={menus} customersData={customersData} />
         </Drawer>
       // </ClickAwayListener>
     )
