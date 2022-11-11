@@ -3,7 +3,7 @@ import { styled, useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Tabs from '@mui/material/Tabs';
 import Tab from '@mui/material/Tab';
-import {AbIcon} from '../icons/DynamicIcon';
+import {ABIcon} from '../icons/ABIcon';
 
   const StyledTabs = styled((props) => (
     <Tabs
@@ -98,7 +98,7 @@ export default function ABIconTabs(props) {
       sx={{mt:2, width: {xs: '100%',sm:'100%', md:'unset'}}}
     >
         {tabs.map((item, index) => (
-            <StyledTab sx={{ }} icon={<AbIcon iconName={item.icon} />} iconPosition={item.position??"start"} label={item.label} key={index}/>      
+            <StyledTab sx={{ }} icon={<ABIcon iconName={item.icon} />} iconPosition={item.position??"start"} label={item.label} key={index}/>      
         ))}
     </StyledTabs>
   );

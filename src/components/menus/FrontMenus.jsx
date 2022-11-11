@@ -5,7 +5,7 @@ import Menu from '@mui/material/Menu';
 import Button from '@mui/material/Button';
 import MenuItem from '@mui/material/MenuItem';
 import Link from '@mui/material/Link';
-import {AbIcon} from '../icons/DynamicIcon';
+import {ABIcon} from '../icons/ABIcon';
 import Grid from '@mui/material/Grid';
 import ABDivider from '../ABDivider';
 import ListItemIcon from '@mui/material/ListItemIcon';
@@ -23,7 +23,7 @@ const pageMenu = ((handleClose)=>(
                 <Box sx={{display:'block'
                 }}>
                     <Box sx={{display:'flex', alignItems:'center', p:1}}>
-                        <AbIcon iconName={'dashboard'} />
+                        <ABIcon iconName={'dashboard'} />
                         <Typography variant="button" sx={{pl:1.5}}>Dashboard</Typography>
                     </Box>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2 }}>
@@ -33,7 +33,7 @@ const pageMenu = ((handleClose)=>(
                         <Typography variant="menu" sx={{padding:'0 28px'}}>Sales</Typography>
                     </MenuItem>
                     <Box sx={{display:'flex', alignItems:'center',p:1.5, mt:2}}>
-                        <AbIcon iconName={'people'} />
+                        <ABIcon iconName={'people'} />
                         <Typography variant="button" sx={{pl:1}}>Users</Typography>
                     </Box>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2}}>
@@ -48,7 +48,7 @@ const pageMenu = ((handleClose)=>(
                 flexDirection: {sm:'column',md:'row'}}}>
                 <Box sx={{display:'block', }}>
                     <Box sx={{display:'flex', alignItems:'center', p:1}}>
-                        <AbIcon iconName={'queue_play_next'} />
+                        <ABIcon iconName={'queue_play_next'} />
                         <Typography variant="button" sx={{pl:1.5}}>Extra</Typography>
                     </Box>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2}}>
@@ -67,7 +67,7 @@ const pageMenu = ((handleClose)=>(
                         <Typography variant="menu" sx={{pl:3.5}}>Notifications</Typography>
                     </MenuItem>
                     <Box sx={{display:'flex', alignItems:'center', p:1, mt:2}}>
-                        <AbIcon iconName={'cottage'} />
+                        <ABIcon iconName={'cottage'} />
                         <Typography variant="button" sx={{pl:1.5}}>Projects</Typography>
                     </Box>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2}}>
@@ -82,7 +82,7 @@ const pageMenu = ((handleClose)=>(
                 flexDirection: {sm:'column',md:'row'}}}>
                 <Box sx={{display:'block',  }}>
                     <Box sx={{display:'flex', alignItems:'center', p:1}}>
-                        <AbIcon iconName={'account_balance'} />
+                        <ABIcon iconName={'account_balance'} />
                         <Typography variant="button" sx={{pl:1.5}}>Amount</Typography>
                     </Box>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2}}>
@@ -92,14 +92,14 @@ const pageMenu = ((handleClose)=>(
                         <Typography variant="menu" sx={{pl:3.5}}>Billings</Typography>
                     </MenuItem>
                     <Box sx={{display:'flex', alignItems:'center',p:1.5, mt:2}}>
-                        <AbIcon iconName={'people'} />
+                        <ABIcon iconName={'people'} />
                         <Typography variant="button" sx={{pl:1}}>Users</Typography>
                     </Box>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2}}>
                         <Typography variant="menu" sx={{pl:3.5}}>Invoice</Typography>
                     </MenuItem>
                     <Box sx={{display:'flex', alignItems:'center', p:1, mt:2}}>
-                        <AbIcon iconName={'badge'} />
+                        <ABIcon iconName={'badge'} />
                         <Typography variant="button" sx={{pl:1.5}}>Profile</Typography>
                     </Box>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2}}>
@@ -125,25 +125,25 @@ const applicationMenu = ((handleClose)=>(
                 }}>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2 }}>
                         <ListItemIcon>
-                            <AbIcon iconName={'widgets'} />
+                            <ABIcon iconName={'widgets'} />
                         </ListItemIcon>
                         <ListItemText><Typography variant="menu">Kan ban</Typography></ListItemText>
                     </MenuItem>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2 }}>
                         <ListItemIcon>
-                            <AbIcon iconName={'import_contacts'} />
+                            <ABIcon iconName={'import_contacts'} />
                         </ListItemIcon>
                         <ListItemText><Typography variant="menu">Wizard</Typography></ListItemText>
                     </MenuItem>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2 }}>
                         <ListItemIcon>
-                            <AbIcon iconName={'backup_table'} />
+                            <ABIcon iconName={'backup_table'} />
                         </ListItemIcon>
                         <ListItemText><Typography variant="menu">Data Tables</Typography></ListItemText>
                     </MenuItem>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2 }}>
                         <ListItemIcon>
-                            <AbIcon iconName={'event'} />
+                            <ABIcon iconName={'event'} />
                         </ListItemIcon>
                         <ListItemText><Typography variant="menu">Calendar</Typography></ListItemText>
                     </MenuItem>
@@ -164,19 +164,19 @@ const authMenu = ((handleClose)=>(
                 }}>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2 }}>
                         <ListItemIcon>
-                            <AbIcon iconName={'login'} />
+                            <ABIcon iconName={'login'} />
                         </ListItemIcon>
                         <ListItemText><Typography variant="menu">Sign in</Typography></ListItemText>
                     </MenuItem>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2 }}>
                         <ListItemIcon>
-                            <AbIcon iconName={'assignment'} />
+                            <ABIcon iconName={'assignment'} />
                         </ListItemIcon>
                         <ListItemText><Typography variant="menu">Sign Up</Typography></ListItemText>
                     </MenuItem>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2 }}>
                         <ListItemIcon>
-                            <AbIcon iconName={'refresh'} />
+                            <ABIcon iconName={'refresh'} />
                         </ListItemIcon>
                         <ListItemText><Typography variant="menu">Reset password</Typography></ListItemText>
                     </MenuItem>
@@ -197,7 +197,7 @@ const eCommerceMenu = ((handleClose)=>(
                 <Box sx={{display:'block'
                 }}>
                     <Box sx={{display:'flex', alignItems:'center', p:1}}>
-                        <AbIcon iconName={'shopping_card'} />
+                        <ABIcon iconName={'shopping_card'} />
                         <Typography variant="button" sx={{pl:1.5}}>Orders</Typography>
                     </Box>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2 }}>
@@ -216,7 +216,7 @@ const eCommerceMenu = ((handleClose)=>(
                 <Box sx={{display:'block'
                 }}>
                     <Box sx={{display:'flex', alignItems:'center', p:1}}>
-                        <AbIcon iconName={'memory'} />
+                        <ABIcon iconName={'memory'} />
                         <Typography variant="button" sx={{pl:1.5}}>Products</Typography>
                     </Box>
                     <MenuItem onClick={handleClose} sx={{padding:'4px 12px',borderRadius:2 }}>
@@ -294,7 +294,7 @@ const mainMenu =((handleClose)=>(
                     }}
                 >
                     <Typography variant="button">pages</Typography>
-                    <AbIcon iconName={anchorEl && anchorEl.id==='menu-page' ?'keyboard_arrow_up':'keyboard_arrow_down'} />
+                    <ABIcon iconName={anchorEl && anchorEl.id==='menu-page' ?'keyboard_arrow_up':'keyboard_arrow_down'} />
                 </Box>
                 <Box
                     id='menu-auth'
@@ -312,7 +312,7 @@ const mainMenu =((handleClose)=>(
                     }}
                 >
                     <Typography variant="button">Authentication</Typography>
-                    <AbIcon iconName={anchorEl && anchorEl.id==='menu-auth' ?'keyboard_arrow_up':'keyboard_arrow_down'} />
+                    <ABIcon iconName={anchorEl && anchorEl.id==='menu-auth' ?'keyboard_arrow_up':'keyboard_arrow_down'} />
                 </Box>
 
                 <Box
@@ -331,7 +331,7 @@ const mainMenu =((handleClose)=>(
                     }}
                 >
                     <Typography variant="button">applications</Typography>
-                    <AbIcon iconName={anchorEl && anchorEl.id==='menu-app' ?'keyboard_arrow_up':'keyboard_arrow_down'} />
+                    <ABIcon iconName={anchorEl && anchorEl.id==='menu-app' ?'keyboard_arrow_up':'keyboard_arrow_down'} />
                 </Box>
 
                 <Box
@@ -350,7 +350,7 @@ const mainMenu =((handleClose)=>(
                     }}
                 >
                     <Typography variant="button">eCommerce</Typography>
-                    <AbIcon iconName={anchorEl && anchorEl.id==='menu-ecommerce' ?'keyboard_arrow_up':'keyboard_arrow_down'} />
+                    <ABIcon iconName={anchorEl && anchorEl.id==='menu-ecommerce' ?'keyboard_arrow_up':'keyboard_arrow_down'} />
                 </Box>                
             </Box>
             <Box sx={{ display: { xs: 'flex', md: 'none' } }}>

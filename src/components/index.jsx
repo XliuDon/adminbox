@@ -6,7 +6,7 @@ export { default as ABSwitchesGroup} from './widgets/ABSwitchGroup';
 export { default as ABBreadcrumbs} from './widgets/ABBreadcrumbs';
 export { default as ABIconTabs} from './widgets/ABTab';
 export { default as ABDivider} from './ABDivider';
-export { AbIcon} from './icons/DynamicIcon';
+export { ABIcon} from './icons/ABIcon';
 export { useMode } from "./themes/theme";
 export { default as ABProjectCard } from "./cards/ABProjectCard";
 export { default as ABBlockSwitch} from './ABBlockSwitch';

@@ -12,7 +12,7 @@ import Avatar from '@mui/material/Avatar';
 import { Link, NavLink} from 'react-router-dom';
 import ABDivider from '../ABDivider';
 import { useStateContext } from '../../contexts/ContextProvider';
-import {AbIcon} from '../icons/DynamicIcon'
+import {ABIcon} from '../icons/ABIcon'
 
 const StyledTreeItemRoot = styled(TreeItem)(({ theme }) => ({
   color: theme.palette.text.secondary,
@@ -128,7 +128,7 @@ function SubMenuItemWrapper (props){
                         (typeof item.avatar !== 'undefined')? 
                         <Avatar src={item.avatar}  sx={{ml:-1}} />
                         :
-                        (item.icon?<AbIcon                                                     
+                        (item.icon?<ABIcon                                                     
                           iconName={item.icon} 
                           fontSize={'medium' }/>                                                  
                           : <TypographyWrapper variant='body1' sx={{ pl:1, pr:1.1}}>{item.name.substring(0,1).toUpperCase()}</TypographyWrapper>)

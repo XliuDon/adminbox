@@ -2,7 +2,7 @@ import React from "react";
 import Icon from '@mui/material/Icon';
 
 
- export const AbIcon =({iconName, ...props }) =>{
+ export const ABIcon =({iconName, ...props }) =>{
 
     return (<Icon {...props}>{iconName}</Icon>);
  }

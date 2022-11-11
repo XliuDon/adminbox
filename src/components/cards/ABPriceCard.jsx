@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import Chip from '@mui/material/Chip';
 import Button from '@mui/material/Button';
-import { AbIcon } from "../icons/DynamicIcon";
+import { ABIcon } from "../icons/ABIcon";
 
   
  export default function  ABPriceCard ({...props }) {
@@ -45,7 +45,7 @@ import { AbIcon } from "../icons/DynamicIcon";
                         {data.map((item,index)=>(
                             <Box key={index} sx={{display:'flex', pt:2, justifyContent:'left'}}>
                                 <Typography variant="body1" sx={{display:'flex', alignItems:'center',mr:2}}>
-                                    <AbIcon iconName={item.status} />
+                                    <ABIcon iconName={item.status} />
                                 </Typography>
                                 <Typography variant="body2" >{item.label}</Typography>
                             </Box>
@@ -54,7 +54,7 @@ import { AbIcon } from "../icons/DynamicIcon";
                 </Box>
 
                 <Box sx={{flexDirection:'inherit', alignItems:'center', p:2}}>
-                    <Button variant="contained" endIcon={<AbIcon iconName='arrow_forward'/>}                     
+                    <Button variant="contained" endIcon={<ABIcon iconName='arrow_forward'/>}                     
                     onClick={action}
                     sx={{                        
                         minHeight: '40px',
