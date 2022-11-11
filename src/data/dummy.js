@@ -636,7 +636,7 @@ export const menus = [
     links: [{
       nodeid:'1_1',
       avatar: avatar,
-      name: 'Brooklyn Alice',
+      name: 'Michael Harper',
       links: [
         {
           nodeid:'1_1_1',
@@ -691,21 +691,30 @@ export const menus = [
         links: [
           {
             nodeid:'3_1_1',
-            name: 'suborders',
+            name: 'projects',
             links: [
               {
                 nodeid:'3_1_1_1',
-                name: 'calendar',
-              },
-              {
-                nodeid:'3_1_1_2',
-                name: 'kanban',
-              },
+                name: 'all projects',
+                link: '/pages/projects/allprojects'
+              }
             ]
           },
           {
             nodeid:'3_1_2',
-            name: 'mycontact',
+            name: 'users',
+            links: [
+              {
+                nodeid:'3_1_2_1',
+                name: 'new user',
+                link: '/pages/users/newuser'
+              }
+            ]
+          },
+          {
+            nodeid:'3_1_3',
+            name: 'price',
+            link: '/pages/price'
           },
         ],
       },

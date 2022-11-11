@@ -139,7 +139,7 @@ export default function Sales() {
                     <Grid item xs={12}>
                         <Paper elevation={2} sx={{p:2, borderRadius:2}}>
                             <Box > 
-                                <Typography variant="h6">Sales by Country</Typography>
+                                <Typography variant="h6">Top Sale Products</Typography>
                             </Box>
                             <Box>
                                 <ABTable 

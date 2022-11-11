@@ -49,12 +49,12 @@ export default function Analytics() {
                 </Box>
                 <Box sx={{p:2}}>
                     <Grid container spacing={3} >                    
-                        <Grid item xs={12} md={7} lg={6}>
+                        <Grid item  md={12} lg={6}>
                             <ABSalesTable                 
                                 rows ={SalesData}
                             />
                         </Grid>
-                        <Grid item xs={12} md={5} lg={6} sx={{p:2}}>
+                        <Grid item md={12} lg={6} sx={{p:2}}>
                             <VectorMap map={worldMill} 
                                     zoomOnScroll = {false}
                                     zoomButtons = {false}
@@ -128,9 +128,9 @@ export default function Analytics() {
                 </Box>
             </Paper>
             
-            <Box sx={{mt:6}}>
+            <Box >
                 <Grid container spacing={3} >                    
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={4} sx={{mt:6}}>
                         <ABViewCard 
                             type = 'bar'
                             title="Website Views"
@@ -142,7 +142,7 @@ export default function Analytics() {
                             data ={ViewData}
                         />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={4} sx={{mt:6}}>
                         <ABViewCard 
                                 type = 'line'
                                 title="Daily Sales"
@@ -154,7 +154,7 @@ export default function Analytics() {
                                 data ={SalesViewData}
                             />
                     </Grid>
-                    <Grid item xs={12} md={4}>
+                    <Grid item xs={12} md={4} sx={{mt:6}}>
                         <ABViewCard 
                                 type = 'line'
                                 title="Completed Tasks"
@@ -220,9 +220,9 @@ export default function Analytics() {
                 </Grid>
             </Box>
             
-            <Box sx={{pt:4}}>
+            <Box >
                 <Grid container spacing={3} >                    
-                    <Grid item xs={12} sm={6} md={4}>
+                    <Grid item xs={12} sm={6} md={4} sx={{mt:4}}>
                         <ABBookingCard 
                             image="/static/images/product-1.jpg" 
                             title="Cozy 5 Stars Apartment"  
@@ -232,7 +232,7 @@ export default function Analytics() {
                             action = {actions()}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4}>
+                    <Grid item xs={12} sm={6} md={4} sx={{mt:4}}>
                         <ABBookingCard 
                             image="/static/images/product-2.jpg" 
                             title="Office Studio"  
@@ -242,7 +242,7 @@ export default function Analytics() {
                             action = {actions()}
                         />
                     </Grid>
-                    <Grid item xs={12} sm={6} md={4}>
+                    <Grid item xs={12} sm={6} md={4} sx={{mt:4}}>
                         <ABBookingCard 
                             image="/static/images/product-3.jpg" 
                             title="Beautiful Castle"  

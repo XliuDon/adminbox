@@ -7,7 +7,7 @@ import { createTheme, ThemeProvider, styled,useTheme,alpha  } from '@mui/materia
 import Typography from '@mui/material/Typography';
 import Fade from '@mui/material/Fade';
 import { menus,customersData } from '../data/dummy';
-import Menus from './Menus'
+import Menus from './menus/Menus'
 import { useStateContext } from '../contexts/ContextProvider';
 import ClickAwayListener from '@mui/base/ClickAwayListener';
 import ABDivider from './ABDivider';

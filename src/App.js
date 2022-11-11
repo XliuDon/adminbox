@@ -11,6 +11,11 @@ import { MyProfile,Footer } from './pages';
 import AccountSetting from './pages/account/Setting';
 import Analytics from './pages/dashboards/Analytics';
 import Sales from './pages/dashboards/Sales';
+import AllProjects from './pages/projects/AllProjects';
+import NewUser from './pages/users/NewUser';
+import HomeLayout from './pages/home';
+import Pricing from './pages/Pricing'
+
 import { useStateContext } from './contexts/ContextProvider';
 
 function App() {
@@ -20,8 +25,6 @@ function App() {
 
   const ContentWrapper = styled(Box)(({ theme }) => ({
     padding: theme.spacing(3),
-    // vertical padding + font size from searchIcon
-    // paddingLeft: `calc(17em + ${theme.spacing(4)})`,
     transition: theme.transitions.create('width'),
     width: '100%',
     opacity: 1,
@@ -44,38 +47,23 @@ function App() {
     <ThemeProvider theme={modeTheme}>
       <CssBaseline />
       <BrowserRouter>
-        <Box
-          sx={{
-            display: 'flex',
-            width: '100%',
-            bgcolor: 'background.default',
-            color: 'text.primary',
-            borderRadius: 1,
-            flexWrap: 'wrap'
-          }} 
-        >
-            <SettingTool />
-            <SettingBar />
-            
-            <ContentWrapper >
-              <NavBar />
-              <Box>                
-                  <Routes>                                       
-                    <Route path='/' element={<MyProfile />} />
-                    <Route path='/profile' element={<MyProfile />} />
-                    <Route path='/account' element={<AccountSetting />} />         
-                    <Route path='/account/setting' element={<AccountSetting />} />             
-                    <Route path='/dashboards' element={<Analytics />} />   
-                    <Route path='/dashboards/analytics' element={<Analytics />} />      
-                    <Route path='/dashboards/sales' element={<Sales />} />      
-                              
-                  </Routes>
-              </Box>      
-              <Footer />
-            </ContentWrapper>     
-
-            <SideBar />            
-          </Box>
+          <Routes>  
+            <Route element={<HomeLayout />}>
+                <Route path='/' element={<MyProfile />} />
+                <Route path='/profile' element={<MyProfile />} />
+                <Route path='/account' element={<AccountSetting />} />         
+                <Route path='/account/setting' element={<AccountSetting />} />             
+                <Route path='/dashboards' element={<Analytics />} />   
+                <Route path='/dashboards/analytics' element={<Analytics />} />      
+                <Route path='/dashboards/sales' element={<Sales />} />      
+                <Route path='/pages' element={<AllProjects />} /> 
+                <Route path='/pages/projects' element={<AllProjects />} /> 
+                <Route path='/pages/projects/allprojects' element={<AllProjects />} />                      
+                <Route path='/pages/users' element={<NewUser />} />   
+                <Route path='/pages/users/newuser' element={<NewUser />} />    
+            </Route>    
+            <Route path="/pages/price" element={<Pricing />} />            
+          </Routes>    
       </BrowserRouter>
     </ThemeProvider>
   );

@@ -104,20 +104,20 @@ const skills =[
                                     <ListItemIcon>
                                         <AbIcon  iconName="person"/>
                                     </ListItemIcon>
-                                    <Typography variant="inherit" noWrap><Link href="#profile" underline="none">Profile</Link></Typography>                                    
+                                    <Typography variant="inherit" noWrap><Link href="#profile" underline="none" color='inherit'>Profile</Link></Typography>                                    
                                 </MenuItem>
                                 <MenuItem  sx={{mt:2, mr:2, ml:2}}>
                                     <ListItemIcon>
                                         <AbIcon  iconName={"receipt_long"}/>
                                     </ListItemIcon>
-                                    <Typography variant="inherit" noWrap><Link href="#basic_info" underline="none">Basic Info</Link></Typography>
+                                    <Typography variant="inherit" noWrap><Link href="#basic_info" underline="none" color='inherit'>Basic Info</Link></Typography>
                                 </MenuItem>
                                 <MenuItem  sx={{mt:2, mr:2, ml:2}}>
                                     <ListItemIcon>
                                         <AbIcon  iconName="lock"/>
                                     </ListItemIcon>
                                     <Typography variant="inherit" noWrap>                                        
-                                        <Link href="#basic_info" underline="none">Change Password</Link>
+                                        <Link href="#basic_info" underline="none" color='inherit'>Change Password</Link>
                                     </Typography>
                                 </MenuItem>
                                 <MenuItem  sx={{mt:2, mr:2, ml:2}}>
@@ -125,7 +125,7 @@ const skills =[
                                         <AbIcon  iconName="security"/>
                                     </ListItemIcon>
                                     <Typography variant="inherit" noWrap>                                        
-                                        <Link href="#2fa" underline="none">2FA</Link>
+                                        <Link href="#2fa" underline="none" color='inherit'>2FA</Link>
                                     </Typography>
                                 </MenuItem>
                                 <MenuItem  sx={{mt:2, mr:2, ml:2}}>
@@ -133,7 +133,7 @@ const skills =[
                                         <AbIcon iconName="badge"/>
                                     </ListItemIcon>
                                     <Typography variant="inherit" noWrap>
-                                        <Link href="#accounts" underline="none">Accounts</Link>                                        
+                                        <Link href="#accounts" underline="none" color='inherit'>Accounts</Link>                                        
                                     </Typography>
                                 </MenuItem>
                                 <MenuItem  sx={{mt:2, mr:2, ml:2}}>
@@ -141,7 +141,7 @@ const skills =[
                                         <AbIcon iconName="campaign"/>
                                     </ListItemIcon>
                                     <Typography variant="inherit" noWrap>                                        
-                                        <Link href="#notifications" underline="none">Notifications</Link>              
+                                        <Link href="#notifications" underline="none" color='inherit'>Notifications</Link>              
                                     </Typography>
                                 </MenuItem>
                                 <MenuItem  sx={{mt:2, mr:2, ml:2}}>
@@ -149,7 +149,7 @@ const skills =[
                                         <AbIcon iconName="settings_applications"/>
                                     </ListItemIcon>
                                     <Typography variant="inherit" noWrap>                                        
-                                        <Link href="#sessions" underline="none">Sessions</Link>  
+                                        <Link href="#sessions" underline="none" color='inherit'>Sessions</Link>  
                                     </Typography>
                                 </MenuItem>
                                 <MenuItem  sx={{m:2}}>
@@ -157,7 +157,7 @@ const skills =[
                                         <AbIcon iconName="delete"/>
                                     </ListItemIcon>
                                     <Typography variant="inherit" noWrap>
-                                        <Link href="#delete_account" underline="none">Delete Account</Link>                                         
+                                        <Link href="#delete_account" underline="none" color='inherit'>Delete Account</Link>                                         
                                     </Typography>
                                 </MenuItem>
                             </MenuList>
@@ -289,7 +289,7 @@ const skills =[
                                                                 </Grid>
                                                                 <Grid item xs={4} >
                                                                     <Autocomplete
-                                                                        id="birth_d"
+                                                                        id="birth_y"
                                                                         options={Array.from({length: 80}, (_, i) => i + 1950)}
                                                                         getOptionLabel={(option) => option.toString()}
                                                                         defaultValue={2021}

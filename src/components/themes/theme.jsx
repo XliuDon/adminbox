@@ -187,7 +187,8 @@ export const themeSettings = (mode) => {
             'sans-serif',
           ].join(','),
         fontSize: 40,
-        textTransform: 'capitalize',
+        fontWeight: 700,
+        // textTransform: 'capitalize',
       },
       h2: {
         fontFamily: [
@@ -197,7 +198,8 @@ export const themeSettings = (mode) => {
             'sans-serif',
           ].join(','),
         fontSize: 32,
-        textTransform: 'capitalize',
+        fontWeight: 700,
+        // textTransform: 'capitalize',
       },
       h3: {
         fontFamily: [
@@ -207,7 +209,8 @@ export const themeSettings = (mode) => {
             'sans-serif',
           ].join(','),
         fontSize: 24,
-        textTransform: 'capitalize',
+        fontWeight: 700,
+        // textTransform: 'capitalize',
       },
       h4: {
         fontFamily: [
@@ -217,7 +220,8 @@ export const themeSettings = (mode) => {
             'sans-serif',
           ].join(','),
         fontSize: 20,
-        textTransform: 'capitalize',
+        fontWeight: 700,
+        // textTransform: 'capitalize',
       },
       h5: {
         fontFamily: [
@@ -228,7 +232,7 @@ export const themeSettings = (mode) => {
           ].join(','),
         fontSize: 18,
         fontWeight: 700,
-        textTransform: 'capitalize',
+        // textTransform: 'capitalize',
       },
       h6: {
         fontFamily: [
@@ -239,7 +243,7 @@ export const themeSettings = (mode) => {
           ].join(','),
         fontSize: 16,
         fontWeight: 700,
-        textTransform: 'capitalize',
+        // textTransform: 'capitalize',
       },
       caption:{
         fontSize: '0.75rem',
@@ -247,6 +251,45 @@ export const themeSettings = (mode) => {
         letterSpacing: '0.03333em',
         fontWeight: 700,
         textTransform: 'uppercase',
+      },
+      button:{
+        fontSize: '1rem',
+        lineHeight: 1.25,
+        letterSpacing: '0.03333em',
+        fontWeight: 500,
+        color: 'inherit',
+        textTransform: 'inherit',
+        textDecoration: 'none'
+      },
+      body1:{
+        fontSize: '1rem',
+        lineHeight: '1.6',
+        letterspacing: '0.01em',
+        textTransform: 'none',
+        textDecoration: 'none',
+        color:  'inherit',
+        fontWeight: 300,
+        letterSpacing: '0.01em'
+      },
+      body2:{
+        fontSize: '0.875rem',
+        lineHeight: '1.6',
+        letterspacing: '0.01em',
+        textTransform: 'none',
+        textDecoration: 'none',
+        color:  'inherit',
+        fontWeight: 300,
+        letterSpacing: '0.01em'
+      },
+      menu:{
+        fontSize: '0.875rem',
+        lineHeight: '1.6',
+        letterspacing: '0.01em',
+        textTransform: 'none',
+        textDecoration: 'none',
+        color:  'inherit',
+        fontWeight: 400,
+        letterSpacing: '0.01em'
       }
     },
   };

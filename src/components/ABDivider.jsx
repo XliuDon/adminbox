@@ -2,13 +2,13 @@ import * as React from 'react';
 import Divider from '@mui/material/Divider';
 import { useStateContext } from '../contexts/ContextProvider';
 
-export default function ABDivider({orientation='horizontal', variant='fullWidth', textAlign='center'}){    
+export default function ABDivider({orientation='horizontal', variant='fullWidth', textAlign='center',...props}){    
     const {currentMode} = useStateContext();
-    console.log('divider',orientation)
     return (       
         currentMode==='dark'?
             <Divider 
                 sx={{
+                    ...props.sx,
                     borderTop: '0px solid rgba(0, 0, 0, 0.12)',
                     borderRight: '0px solid rgba(0, 0, 0, 0.12)',
                     borderLeft: '0px solid rgba(0, 0, 0, 0.12)',
@@ -28,6 +28,7 @@ export default function ABDivider({orientation='horizontal', variant='fullWidth'
             :
             <Divider 
                 sx={{
+                    ...props.sx,
                     borderTop: '0px solid rgba(0, 0, 0, 0.08)',
                     borderRight: '0px solid rgba(0, 0, 0, 0.08)',
                     borderLeft: '0px solid rgba(0, 0, 0, 0.08)',

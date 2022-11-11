@@ -10,9 +10,9 @@ import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
 import ArrowRightIcon from '@mui/icons-material/ArrowRight';
 import Avatar from '@mui/material/Avatar';
 import { Link, NavLink} from 'react-router-dom';
-import ABDivider from './ABDivider';
-import { useStateContext } from '../contexts/ContextProvider';
-import {AbIcon} from './icons/DynamicIcon'
+import ABDivider from '../ABDivider';
+import { useStateContext } from '../../contexts/ContextProvider';
+import {AbIcon} from '../icons/DynamicIcon'
 
 const StyledTreeItemRoot = styled(TreeItem)(({ theme }) => ({
   color: theme.palette.text.secondary,

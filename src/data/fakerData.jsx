@@ -4,6 +4,26 @@ import Box from '@mui/material/Box';
 import Avatar from '@mui/material/Avatar';
 import Icon from '@mui/material/Icon';
 import Typography from '@mui/material/Typography';
+import avatar from '../data/avatar.jpg'
+import avatar2 from '../data/avatar2.jpg';
+import avatar3 from '../data/avatar3.png';
+import avatar4 from '../data/avatar4.jpg';
+
+import coinbase from './logo-coinbase.svg'
+import nasa from './logo-nasa.svg'
+import netflix from './logo-netflix.svg'
+import pinterest from './logo-pinterest.svg'
+import spotify from './logo-spotify.svg'
+import vodafone from './logo-vodafone.svg'
+
+export const logos = [
+  coinbase,
+  nasa,
+  netflix,
+  pinterest,
+  spotify,
+  vodafone
+]
 
 export const breadcrumbNameMap = {
     '/profile': 'Profile',
@@ -12,6 +32,11 @@ export const breadcrumbNameMap = {
     '/dashboards':'Dashboards',
     '/dashboards/analytics':'Analytics',
     '/dashboards/sales':'Sales',
+    '/pages':'Pages',
+    '/pages/projects':'Projects',
+    '/pages/projects/allprojects':'All Projects',        
+    '/pages/users':'Users',
+    '/pages/users/newuser':'New User',
   };
 
   
@@ -751,4 +776,24 @@ export const TopSalesData =
       },
     ]
 },
-    ];
+];
+
+
+export const ParticipantsData =[
+  {
+      name:'user 1',
+      image: avatar
+  },
+  {
+      name:'user 2',
+      image: avatar2
+  },
+  {
+      name:'user 3',
+      image: avatar3
+  },
+  {
+      name:'user 4',
+      image: avatar4
+  }
+]

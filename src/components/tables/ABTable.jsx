@@ -39,8 +39,8 @@ import Typography from '@mui/material/Typography';
                             return (
                                 <TableCell key={cindex} {...propdata} align={cell.align??'left'} >
                                     {cell.type==='switch' && <ABBlockSwitch checked={cell.value}/>}
-                                    {cell.type==='text' && cell.title}
-                                    {/* {cell.type==='text' && <Typography variant='body1' >{cell.title}</Typography>} */}
+                                    {/* {cell.type==='text' && cell.title} */}
+                                    {cell.type==='text' && <Typography variant='button' >{cell.title}</Typography>}
                                     {cell.type==='text' && cell.lable && <Typography variant='body2' >{cell.lable}</Typography>}
                                 </TableCell>
                             );

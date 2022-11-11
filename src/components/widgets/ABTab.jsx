@@ -73,6 +73,8 @@ import {AbIcon} from '../icons/DynamicIcon';
 export default function ABIconTabs(props) {
   const [value, setValue] = React.useState(0);
   const {tabs } = props;
+  let data ={...props};
+  delete data.tabs;
   const theme = useTheme();
   const handleChange = (event, newValue) => {
     setValue(newValue);
@@ -85,27 +87,10 @@ export default function ABIconTabs(props) {
   }else{
     orientation = 'horizontal';
   }
-  console.log('sm',sm)
-//    React.useEffect(()=>{
-//     console.log('sm',sm)
-//     //  const xs = useMediaQuery(theme.breakpoints.only('xs'));
-// //    const sm = useMediaQuery(theme.breakpoints.down('sm'));
-// // const md = useMediaQuery(theme.breakpoints.only('md'));
-// // const lg = useMediaQuery(theme.breakpoints.only('lg'));
-// // const xl = useMediaQuery(theme.breakpoints.only('xl'));
-
-//     if(sm){
-//         orientation = 'vertical';
-//     }else{
-//         orientation = 'horizontal';
-//     }
-//     console.log('orientation',orientation)
-//   },[screenSize])
-
-  console.log('tabs',tabs)
 
   return (
     <StyledTabs 
+      {...data}
       orientation={orientation}
       value={value}
       onChange={handleChange}
