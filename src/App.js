@@ -15,6 +15,7 @@ import AllProjects from './pages/projects/AllProjects';
 import NewUser from './pages/users/NewUser';
 import HomeLayout from './pages/home';
 import Pricing from './pages/Pricing'
+import Widgets from './pages/widgets/Widgets'
 
 import { useStateContext } from './contexts/ContextProvider';
 
@@ -60,7 +61,8 @@ function App() {
                 <Route path='/pages/projects' element={<AllProjects />} /> 
                 <Route path='/pages/projects/allprojects' element={<AllProjects />} />                      
                 <Route path='/pages/users' element={<NewUser />} />   
-                <Route path='/pages/users/newuser' element={<NewUser />} />    
+                <Route path='/pages/users/newuser' element={<NewUser />} />   
+                <Route path='/pages/widgets' element={<Widgets />} />    
             </Route>    
             <Route path="/pages/price" element={<Pricing />} />            
           </Routes>    

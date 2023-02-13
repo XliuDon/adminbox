@@ -10,9 +10,10 @@ import ListItemAvatar from '@mui/material/ListItemAvatar';
 import Avatar from '@mui/material/Avatar';
 import ABBlockSwitch  from '../ABBlockSwitch'
 
- export default function  ABSwitchItem ({...props }) {
-    const {image, title, lable, defaultState} = props;
-    const [state, setState] = React.useState(defaultState??false);
+ export default function  ABSwitchItem ({ ...props }) {
+    const {image, title, lable, defaultstate} = props;
+    console.log('defaultstate',defaultstate)
+    const [state, setState] = React.useState(defaultstate?true: false);
 
     const handleChange = (event) => {    
         setState(event.target.checked);        
@@ -47,7 +48,7 @@ import ABBlockSwitch  from '../ABBlockSwitch'
             </Box>
             <Box sx={{display:'flex', alignItems:'center'}}>
                 <Typography variant='body2' >{state?'Enabled' : 'Disabled'}</Typography>
-                <ABBlockSwitch checked={state} onClick={handleChange}/>
+                <ABBlockSwitch checked={+state} onClick={handleChange}/>
             </Box>
         </Box>
     );

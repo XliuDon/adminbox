@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import { styled } from '@mui/material/styles';
 import {SettingTool, SettingBar, SideBar, NavBar} from '../components';
 import { useStateContext } from '../contexts/ContextProvider';
+import Footer from './footer'
 
 export default function HomeLayout() {
   const { activeMenu} = useStateContext();
@@ -46,6 +47,7 @@ export default function HomeLayout() {
                 <Box>    
                     <Outlet />          
                 </Box>
+                <Footer />
             </ContentWrapper >
             <SideBar />
         </Box>

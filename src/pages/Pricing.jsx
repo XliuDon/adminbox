@@ -17,6 +17,7 @@ import PinterestIcon from '@mui/icons-material/Pinterest';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import IconButton from '@mui/material/IconButton';
 import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
+import { ConnectWallet,ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 
 const tabs =[
     {
@@ -86,6 +87,9 @@ const questions =[
 ]
 
 export default function Pricing() {
+    // This is the chainId your dApp will work on.
+    const activeChainId = ChainId.Mainnet;
+
     const handleClick =(e)=>{
         console.log('click button')
     }
@@ -112,9 +116,11 @@ export default function Pricing() {
                         <FrontMenus />
                     </Box>
                     <Box sx={{display: { xs: 'none', md: 'flex' }}}>
-                        <IconButton aria-label="wallet" sx={{color:'inherit'}}>
-                            <AccountBalanceWalletIcon />
-                        </IconButton>
+                        <ThirdwebProvider desiredChainId={activeChainId}>
+                                <ConnectWallet variant="body1"
+                                    accentColor="#fff"
+                                />
+                            </ThirdwebProvider>
                     </Box>
                 </Box>
             </Container>

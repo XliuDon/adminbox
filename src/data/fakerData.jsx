@@ -37,6 +37,7 @@ export const breadcrumbNameMap = {
     '/pages/projects/allprojects':'All Projects',        
     '/pages/users':'Users',
     '/pages/users/newuser':'New User',
+    '/pages/widgets':'Widgets',
   };
 
   
@@ -797,3 +798,34 @@ export const ParticipantsData =[
       image: avatar4
   }
 ]
+
+export const Events ={
+  title:"Coming up events",
+  subtitle:'Joined',
+  events:[
+    {
+      icon:'savings',
+      title:'Cyber Week',
+      description:'27 March 2022, at 12:30 PM'
+    },
+    {
+      icon:'notifications_active',
+      title:'Meeting with Marry',
+      description:'24 March 2022, at 12:30 PM'
+    },
+    {
+      icon:'task',
+      title:'Tasks planification',
+      description:'23 March 2022, at 12:30 PM'
+    },
+  ]
+}
+
+
+export const Tasks ={
+  title:"Tasks",
+  description:'480',
+  icon: 'date_range',
+}
+
+

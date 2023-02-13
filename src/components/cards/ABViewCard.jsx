@@ -55,9 +55,9 @@ ChartJS.register(
                         <Typography variant="h6">{title}</Typography>
                         <Typography variant="body1">{label}</Typography>
                         <ABDivider />
-                        <Box sx={{display: 'flex', alignContent:'center'}} gap={1} >
+                        <Box sx={{display: 'flex', alignItems:'center'}} gap={1} >
                             <Icon fontSize="small">schedule</Icon>
-                            <Typography variant="body1">{message}</Typography>
+                            <Typography variant="body1" component={'span'}>{message}</Typography>
                         </Box>
                     </Box>
                 </Box>

@@ -253,7 +253,7 @@ export const themeSettings = (mode) => {
         textTransform: 'uppercase',
       },
       button:{
-        fontSize: '1rem',
+        fontSize: '0.75rem',
         lineHeight: 1.25,
         letterSpacing: '0.03333em',
         fontWeight: 500,
@@ -262,13 +262,13 @@ export const themeSettings = (mode) => {
         textDecoration: 'none'
       },
       body1:{
-        fontSize: '1rem',
+        fontSize: '0.875rem',
         lineHeight: '1.6',
         letterspacing: '0.01em',
         textTransform: 'none',
         textDecoration: 'none',
         color:  'inherit',
-        fontWeight: 300,
+        fontWeight: 400,
         letterSpacing: '0.01em'
       },
       body2:{

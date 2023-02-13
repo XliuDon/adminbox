@@ -34,7 +34,7 @@ export default function  ABInfoCard ({...props }) {
             </Box>
             <ABDivider />
             <Box sx={{pl:2, pb:2}}>
-                <Typography variant='body1' sx={{mt:2}}>{message}</Typography>
+                <Box  sx={{mt:2}}>{message}</Box>
             </Box>
         </Paper>
     </Box>

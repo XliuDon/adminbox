@@ -716,6 +716,11 @@ export const menus = [
             name: 'price',
             link: '/pages/price'
           },
+          {
+            nodeid:'3_1_4',
+            name: 'widgets',
+            link: '/pages/widgets'
+          },
         ],
       },
       {

@@ -18,8 +18,6 @@ import TextField from '@mui/material/TextField';
 import Autocomplete from '@mui/material/Autocomplete';
 import Icon from '@mui/material/Icon';
 
-import ArrowForwardRoundedIcon from '@mui/icons-material/ArrowForwardRounded';
-
 import {ABIconTabs, ABIcon, ABBlockSwitch, ABDivider, ABSwitchItem, ABTable, ABDefaultItem} from '../../components/index';
 
 import avatar from '../../data/avatar.jpg';
@@ -550,28 +548,25 @@ const skills =[
                                                 image={'/static/images/slack-logo.png'}
                                                 title={'Slack'} 
                                                 lable={'Show less'} 
-                                                defaultState={true}
                                             />
                                             <ABDivider />
                                             <ABSwitchItem 
                                                 image={'/static/images/spotify.png'}
                                                 title={'Spotify'} 
                                                 lable={'Music'} 
-                                                defaultState={false}
                                             />
                                             <ABDivider />
                                             <ABSwitchItem 
                                                 image={'/static/images/paypal.png'}
                                                 title={'Paypal'} 
                                                 lable={'Payment vendor'} 
-                                                defaultState={true}
+                                                defaultstate={+true}
                                             />
                                             <ABDivider />
                                             <ABSwitchItem 
                                                 image={'/static/images/asana.png'}
                                                 title={'Asana'} 
                                                 lable={'Organize your team'} 
-                                                defaultState={false}
                                             />
                                             <ABDivider />
                                         </Box>

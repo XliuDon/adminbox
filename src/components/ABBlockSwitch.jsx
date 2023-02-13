@@ -33,8 +33,8 @@ export default function ABBlockSwitch(props){
   const {checked, defaultChecked} = props;    
   const childProps = { ...props };
   delete childProps.defaultChecked;
-  const [state, setState] = React.useState(checked??(defaultChecked??false));
-
+  delete childProps.checked;
+  const [state, setState] = React.useState(checked?true: (defaultChecked??false));
   const handleChange = (event) => {    
     setState(event.target.checked);        
   };
