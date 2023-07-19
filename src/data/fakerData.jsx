@@ -38,6 +38,8 @@ export const breadcrumbNameMap = {
     '/pages/users':'Users',
     '/pages/users/newuser':'New User',
     '/pages/widgets':'Widgets',
+    '/applications':'Applications',
+    '/applications/vehicles':'Vehicle Management',
   };
 
   
@@ -829,3 +831,229 @@ export const Tasks ={
 }
 
 
+export const VehicleListHeaders=[
+  {
+    align: 'left',
+    lable: '车辆'
+  },
+  {
+    align: 'left',
+    lable: '状态'
+  },
+  {
+    align: 'left',
+    lable: '所属门店'
+  },
+  {
+    align: 'left',
+    lable: '车型'
+  },
+  {
+    align: 'left',
+    lable: '里程'
+  }
+]
+
+export const VehicleListData = 
+    [
+        {
+            cells:[
+                {
+                    type: "text",
+                    align: "left",
+                    title:
+                      <>
+                        <Box sx={{display:'flex', alignItems:'center'}}>
+                          <Avatar src={'/static/vehicles/tesla-m3_1.jpg'}  />
+                          <Box sx={{display:'block', pl:2}}>
+                            <Typography variant="button">Tesla</Typography>
+                            <Typography variant="body2">
+                              <Typography variant="caption" sx={{color:'rgb(76, 175, 80)'}}>京 A12345 </Typography>
+                            </Typography>
+                          </Box>
+                        </Box>
+                      </> 
+                },
+                {
+                    type: "text",
+                    title: "运营中",
+                },
+                {
+                    type: "text",
+                    title: "朝阳店",
+                },
+                {
+                  type: "text",
+                  title: <>
+                    <Box sx={{display:'flex', alignItems:'center'}}>
+                        <Typography variant="button">三箱轿车</Typography>
+                    </Box>
+                  </> 
+                },
+                {
+                  type: "text",
+                  title: "1859",
+                },
+            ]
+        },
+        {
+          cells:[
+              {
+                  type: "text",
+                  align: "left",
+                  title:
+                    <>
+                      <Box sx={{display:'flex', alignItems:'center'}}>
+                          <Avatar src={'/static/vehicles/tesla-m3_2.jpg'}  />
+                          <Box sx={{display:'block', pl:2}}>
+                            <Typography variant="button">Tesla</Typography>
+                            <Typography variant="body2">
+                              <Typography variant="caption" sx={{color:'rgb(76, 175, 80)'}}>沪 A12345 </Typography>
+                            </Typography>
+                          </Box>
+                        </Box>
+                    </> 
+              },
+              {
+                type: "text",
+                title: "运营中",
+              },
+              {
+                  type: "text",
+                  title: "朝阳店",
+              },
+              {
+                type: "text",
+                title: <>
+                  <Box sx={{display:'flex', alignItems:'center'}}>
+                      <Typography variant="button">三箱轿车</Typography>
+                  </Box>
+                </> 
+              },
+              {
+                type: "text",
+                title: "1859",
+              },
+          ]
+      },
+      {
+        cells:[
+            {
+                type: "text",
+                align: "left",
+                title:
+                  <>
+                    <Box sx={{display:'flex', alignItems:'center'}}>
+                          <Avatar src={'/static/vehicles/tesla-m3_3.jpg'}  />
+                          <Box sx={{display:'block', pl:2}}>
+                            <Typography variant="button">Tesla</Typography>
+                            <Typography variant="body2">
+                              <Typography variant="caption" sx={{color:'rgb(76, 175, 80)'}}>川 A12345 </Typography>
+                            </Typography>
+                          </Box>
+                        </Box>
+                  </> 
+            },
+            {
+              type: "text",
+              title: "运营中",
+            },
+            {
+                type: "text",
+                title: "朝阳店",
+            },
+            {
+              type: "text",
+              title: <>
+                <Box sx={{display:'flex', alignItems:'center'}}>
+                    <Typography variant="button">三箱轿车</Typography>
+                </Box>
+              </> 
+            },
+            {
+              type: "text",
+              title: "1859",
+            },
+        ]
+    },
+    {
+      cells:[
+          {
+              type: "text",
+              align: "left",
+              title:
+                <>
+                  <Box sx={{display:'flex', alignItems:'center'}}>
+                      <Avatar src={'/static/vehicles/tesla-m3_1.jpg'}  />
+                      <Box sx={{display:'block', pl:2}}>
+                        <Typography variant="button">Tesla</Typography>
+                        <Typography variant="body2">
+                          <Typography variant="caption" sx={{color:'rgb(76, 175, 80)'}}>粤 A12345 </Typography>
+                        </Typography>
+                      </Box>
+                    </Box>
+                </> 
+          },
+          {
+            type: "text",
+            title: "运营中",
+          },
+          {
+              type: "text",
+              title: "朝阳店",
+          },
+          {
+            type: "text",
+            title: <>
+              <Box sx={{display:'flex', alignItems:'center'}}>
+                  <Typography variant="button">三箱轿车</Typography>
+              </Box>
+            </> 
+          },
+          {
+            type: "text",
+            title: "1859",
+          },
+      ]
+  },
+  {
+    cells:[
+        {
+            type: "text",
+            align: "left",
+            title:
+              <>
+                <Box sx={{display:'flex', alignItems:'center'}}>
+                  <Avatar src={'/static/vehicles/tesla-m3_1.jpg'}  />
+                  <Box sx={{display:'block', pl:2}}>
+                    <Typography variant="button">Tesla</Typography>
+                    <Typography variant="body2">
+                      <Typography variant="caption" sx={{color:'rgb(76, 175, 80)'}}>京 A65466 </Typography>
+                    </Typography>
+                  </Box>
+                </Box>
+              </> 
+        },
+        {
+          type: "text",
+          title: "运营中",
+        },
+        {
+            type: "text",
+            title: "朝阳店",
+        },
+        {
+          type: "text",
+          title: <>
+            <Box sx={{display:'flex', alignItems:'center'}}>
+                <Typography variant="button">三箱轿车</Typography>
+            </Box>
+          </> 
+        },
+        {
+          type: "text",
+          title: "1859",
+        },
+    ]
+},
+];

@@ -4,6 +4,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import Paper from '@mui/material/Paper';
 import ABDivider from '../ABDivider';
+import { GrInherit } from "react-icons/gr";
 
 
 
@@ -11,8 +12,9 @@ import ABDivider from '../ABDivider';
     const {image, title, description, price, location, action} = props;
 
     return (
-        <Box>
+        <Box sx={{height:'100%'}}>
             <Paper elevatio={3} sx={{
+                height: '100%',
                 borderRadius:2,
                 transition: 'box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms',
                 "& :hover .card-header":{                      
@@ -21,7 +23,8 @@ import ABDivider from '../ABDivider';
             }}> 
                 <Box
                     sx={{
-                        p:2
+                        p:2,
+                        height: '100%',
                     }}
                 >
                     <Box className={'card-header'} sx={{
@@ -67,10 +70,10 @@ import ABDivider from '../ABDivider';
                     </Box>
                     <ABDivider />
                     <Box sx={{p:2 , display:'flex', justifyContent:'space-between', alignItems:'center'}} gap={1}>
-                        <Typography variant="caption" >$899/night</Typography> 
+                        <Typography variant="caption" >{price}</Typography> 
                         <Box sx={{display:'flex'}}>
                             <Icon>place</Icon>
-                            <Typography variant="button">Barcelona, Spain</Typography> 
+                            <Typography variant="button">{location}</Typography> 
                         </Box>
                     </Box>
                 </Box>

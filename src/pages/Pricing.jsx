@@ -6,7 +6,7 @@ import Paper from '@mui/material/Paper';
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Link from '@mui/material/Link';
-import {FrontMenus, ABIconTabs, ABPriceCard,ABAccordion, WalletConnector} from '../components'
+import {FrontMenus, ABIconTabs, ABPriceCard,ABAccordion} from '../components'
 import {logos} from '../data/fakerData'
 import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
@@ -16,8 +16,6 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import IconButton from '@mui/material/IconButton';
-import AccountBalanceWalletIcon from '@mui/icons-material/AccountBalanceWallet';
-import { ConnectWallet,ChainId, ThirdwebProvider } from "@thirdweb-dev/react";
 
 const tabs =[
     {
@@ -87,8 +85,6 @@ const questions =[
 ]
 
 export default function Pricing() {
-    // This is the chainId your dApp will work on.
-    const activeChainId = ChainId.Mainnet;
 
     const handleClick =(e)=>{
         console.log('click button')
@@ -116,11 +112,6 @@ export default function Pricing() {
                         <FrontMenus />
                     </Box>
                     <Box sx={{display: { xs: 'none', md: 'flex' }}}>
-                        <ThirdwebProvider desiredChainId={activeChainId}>
-                                <ConnectWallet variant="body1"
-                                    accentColor="#fff"
-                                />
-                            </ThirdwebProvider>
                     </Box>
                 </Box>
             </Container>

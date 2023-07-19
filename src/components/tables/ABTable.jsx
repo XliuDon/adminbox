@@ -23,7 +23,8 @@ import Typography from '@mui/material/Typography';
                 <TableHead>
                     <TableRow sx={{ textTransform: "uppercase"}}>
                         {headers.map((header,index) => (
-                            <TableCell key={index} align={header.align??'left'}>{header.lable}</TableCell>
+                            <TableCell key={index} align={header.align??'left'}>
+                                <Typography  sx={{fontWeight: 'bold'}} >{header.lable}</Typography></TableCell>
                         ))}
                     </TableRow>
                 </TableHead>

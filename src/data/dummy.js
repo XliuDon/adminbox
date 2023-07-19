@@ -727,6 +727,20 @@ export const menus = [
         nodeid:'3_2',
         name: 'applications',
         icon: 'apps',
+        links: [
+          {
+            nodeid:'3_2_1',
+            name: 'vehicles management',
+            icon: 'directions_car',
+            link: '/applications/vehicles'
+          },
+          {
+            nodeid:'3_2_1',
+            name: 'vehicles list',
+            icon: 'list',
+            link: '/applications/vehicle-list'
+          }
+        ]
       },
       {
         nodeid:'3_3',
