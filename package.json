@@ -70,5 +70,9 @@
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-react-hooks": "^4.6.0",
     "react-error-overlay": "^6.0.9"
+  },
+  "repository": {
+    "type": "git",
+      "url": "git+https://github.com/XliuDon/adminbox.git"
   }
 }
